@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="원래 가격을 입력하세요"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="178dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="44dp"
+        android:text="등급을 선택하세요"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="217dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rbGrade1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="최상위(20%)" />
+
+        <RadioButton
+            android:id="@+id/rbGrade2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="보통(15%)" />
+
+        <RadioButton
+            android:id="@+id/rbGrade3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="최하위(10%)" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/swRound"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
+        android:text="올림"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="계산"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swRound" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="결과"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOK" />
+</androidx.constraintlayout.widget.ConstraintLayout>
